@@ -1,13 +1,13 @@
 .feature-list {
-    display: flex;
+//     display: flex;
     @extend %list;
 }
 
 .feature-list__item {
-    width: calc((100% - 90px) / 4);
+    // width: calc((100% - 90px) / 4);
     
     &:not(:last-child) {
-        margin-right: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -17,7 +17,7 @@
     align-items: center;
     margin-bottom: 30px;
     height: 120px;
-    width: 270px;
+    width: 100%;
 
     background-color: $color-third-bg;
     border-radius: 4px;
@@ -30,6 +30,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
 }
 

@@ -5,21 +5,19 @@
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-decoration: none;
-    // font-size: 26px;
-    // line-height: 1.19; 
 }
 
 .page-header__logo {
     color: $color-icon;
 }
 
-// .page-footer__logo {
-//     display: inline-block;
-//     margin-bottom: 20px;
-
-//     color: $color-secondary-accent;
-// }
-
-.logo__highlight {
+.logo__text--highlight {
     color: $color-accent;
+}
+
+.page-footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    color: $color-secondary-accent;
 }

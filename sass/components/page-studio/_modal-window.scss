@@ -20,14 +20,15 @@
 }
 
 // Модальне вікно 
+
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
 
     padding: 40px;
-    min-width: 528px;
-    min-height: 581px;
+    max-width: 450px;
+    max-height: 609px;
 
     background-color: $color-primary-bg;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -46,11 +47,12 @@
     top: 8px;
     right: 8px;
 
-    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
 
-    text-align: center;
     color: $color-icon;
 
     background-color: $color-primary-bg;
@@ -69,17 +71,22 @@
     }
 }
 
-.modal-form {
-    width: 448px;
+.close-btn__icon {
+    fill: currentColor;
 }
+
+// .modal-form {
+//     width: 448px;
+// }
 
 .modal-form__title {
     display: block;
     margin-top: 0;
     margin-bottom: 12px;
+    max-width: 370px;
 
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: $color-primary;
@@ -119,7 +126,7 @@
 .modal-form__comment {
     width: 100%;
 
-    color: $color-text-form;
+    color: $color-text-form; 
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -174,7 +181,7 @@
 }
 
 .modal-form__icon-check {
-    margin-right: 7px;
+    margin-right: 8px;
 
     border: 1.75px solid $color-primary;
     border-radius: 2px;
@@ -198,6 +205,9 @@
 }
 
 .modal-form__policy {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
     color: $color-secondary;
 }
 

@@ -16,21 +16,29 @@ body {
     max-width: 480px;
 }
 
-// .section {
-//     padding-top: 94px;
-//     padding-bottom: 94px;
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-//     &--no-top-padding {
-//         padding-top: 0;
-//     }
-// }
+    &--hidden {
+        display: none;
+    }
 
-// .section__title {
-//     margin-top: 0;
-//     margin-bottom: 50px;
+    &--team-bg {
+        background-color: $color-third-bg;
+    }
 
-//     font-size: 36px;
-//     line-height: 1.17;
-//     letter-spacing: 0.03em;
-//     text-align: center;
-// }
+    // &--no-top-padding {
+    //     padding-top: 0;
+    // }   
+}
+
+.section__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
