@@ -22,19 +22,32 @@
         </a>
 
         <button
-          class="menu-btn"
-          data-menu-button
+          class="menu-btn js-open-menu"
           type="button"
           aria-expanded="false"
-          aria-controls="menu-container"
+          aria-controls="mobile-menu"
         >
-          <svg class="menu-btn__icon" aria-label="Перемикач мобільного меню" width="40" height="40">
+          <svg
+            class="menu-btn__icon"
+            aria-label="Кнопка виклику мобільного меню"
+            width="40"
+            height="40"
+          >
             <use href="./images/icons.svg#menu-btn"></use>
           </svg>
         </button>
 
-        <div class="menu-container" id="menu-container" data-menu>
-          <button class="close-btn" type="button"></button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-btn menu-btn--close js-close-menu" type="button">
+            <svg
+              class="menu-btn__icon"
+              aria-label="Кнопка закриття мобільного меню"
+              width="40"
+              height="40"
+            >
+              <use href="./images/icons.svg#menu-close-btn"></use>
+            </svg>
+          </button>
 
           <nav class="site-nav">
             <ul class="site-nav__list">
@@ -63,7 +76,10 @@
             </li>
 
             <li class="contacts-list__item">
-              <a class="contacts-list__link" href="tel:+380961111111">
+              <a
+                class="contacts-list__link contacts-list__link--highlight"
+                href="tel:+380961111111"
+              >
                 <svg class="contacts-list__icon" width="10" height="16">
                   <use href="./images/icons.svg#smartphone"></use>
                 </svg>
@@ -72,21 +88,37 @@
             </li>
           </ul>
 
-          <ul class="">
-            <li>
-              <a href="#"></a>
+          <ul class="social-network-list">
+            <li class="social-network-lists__item">
+              <a class="social-network-lists__link" href="#" aria-label="Instagram">
+                <svg width="85" height="22">
+                  <use href="./images/icons.svg#instagram-text"></use>
+                </svg>
+              </a>
             </li>
 
-            <li>
-              <a href="#"></a>
+            <li class="social-network-lists__item">
+              <a class="social-network-lists__link" href="#" aria-label="Twitter">
+                <svg width="59" height="22">
+                  <use href="./images/icons.svg#twitter-text"></use>
+                </svg>
+              </a>
             </li>
 
-            <li>
-              <a href="#"></a>
+            <li class="social-network-lists__item">
+              <a class="social-network-lists__link" href="#" aria-label="Facebook">
+                <svg width="81" height="22">
+                  <use href="./images/icons.svg#facebook-text"></use>
+                </svg>
+              </a>
             </li>
 
-            <li>
-              <a href="#"></a>
+            <li class="social-networks-list__item">
+              <a class="social-networks-list__link" href="#" aria-label="Linkedin">
+                <svg width="72" height="22">
+                  <use href="./images/icons.svg#linkedin-text"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -668,7 +700,13 @@
       </div>
     </div>
 
-    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/menu.js"></script>
 
     <script src="./js/modal.js"></script>
 

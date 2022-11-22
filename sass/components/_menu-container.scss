@@ -1,100 +1,155 @@
 // Навігація 
 
 .menu-container {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    padding: 48px 40px;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $color-primary-bg;
+
+    transform: translateY(-100%);
+    transition: transform $duration $timing-function;
+
+    &.is-open {
+        transform: translateY(0);
+    }
 }
 
 .menu-btn {
     padding: 0;
+    width: 40px;
+    height: 40px;
+
+    color: $color-primary;
 
     background-color: transparent;
     border: none;
+
+    transition: color $duration $timing-function;
+
+    &--close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-accent;
+    }
 }
 
 .menu-btn__icon {
-    fill: $color-icon;
+    fill: currentColor;
 }
 
+// Навігація
+
 // .site-nav {
-//     display: flex;
-//     align-items: center;
+    // display: flex;
+    // align-items: center;
 // }
 
-// .site-nav__list {
-//     display: flex;
-//     margin-left: 93px;
-//     @extend %list;
-// }
+.site-nav__list {
+    // display: flex;
+    // margin-left: 93px;
+    @extend %list;
+}
 
-// .site-nav__item:not(:last-child) {
-//     margin-right: 50px;
-// }
+.site-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+    // margin-right: 50px;
+}
 
-// .site-nav__link {
-//     position: relative;
+.site-nav__link {
+    // position: relative;
 
-//     display: block;
+    // display: inline-block;
 
-//     color: $color-primary;
-// }
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $color-primary;
+    text-decoration: none;
 
-// .site-nav__link--current {
-//     color: $color-accent;
-
-//     &::after {
-//         position: absolute;
-//         bottom: -1px;
-//         left: 0;
-
-//         display: block;
-//         content: "";
-//         height: 4px;
-//         width: 100%;
-
-//         background-color: $color-accent;
-//         border-radius: 2px;
-//     }
-// }
+    &--current {
+        color: $color-accent;
+    
+        // &::after {
+        // position: absolute;
+        // bottom: -1px;
+        // left: 0;
+    
+            // display: block;
+        // content: "";
+        // height: 4px;
+        // width: 100%;
+    
+        // background-color: $color-accent;
+        // border-radius: 2px;
+        // }
+    }
+}
 
 // Контакти 
 
-// .contacts-list {
+.contacts-list {
 //     display: flex;
 //     margin-left: auto;
-//     @extend %list;
-// }
+    display: inline-flex;
+    flex-direction: column-reverse;
 
-// .contacts-list__item:not(:last-child) {
-//     margin-right: 30px;
-// }
+    @extend %list;
+}
 
-// .contacts-list__link {
-//     display: flex;
-//     align-items: center;
+.contacts-list__item:not(:last-child) {
+    margin-top: 32px;
+    // margin-right: 30px;
+}
 
-//     color: $color-secondary;
-// }
+.contacts-list__link {
+    //     display: flex;
+    //     align-items: center;
+    //     padding-top: 32px;
+    //     padding-bottom: 32px;
 
-// .contacts-list__icon {
-//     margin-right: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $color-secondary;
 
-//     fill: currentColor;
-// }
+    //     line-height: 1.14;
 
-// .site-nav__link,
-// .contacts-list__link {
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+    //     transition: color $duration $timing-function;
 
-//     font-weight: 500;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//     text-decoration: none;
+    &--highlight {
+        font-size: 34px;
+        line-height: 1.18;
+        color: $color-accent;
+    }
 
-//     transition: color $duration $timing-function;
+    //     &:hover,
+    //     &:focus {
+    //         color: $color-accent;
+    //     }
+}
 
-//     &:hover,
-//     &:focus {
-//         color: $color-accent;
-//     }
-// }
+.contacts-list__icon {
+    display: none;
+    // margin-right: 10px;
+
+    // fill: currentColor;
+}
+
+// Social-network 
