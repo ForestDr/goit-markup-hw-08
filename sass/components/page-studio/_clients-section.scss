@@ -3,14 +3,12 @@
     flex-wrap: wrap;
     justify-content: center;
 //     justify-content: space-between;
-    margin-right: calc($set-gap * -1);
-    margin-bottom: calc($set-gap * -1);
+    margin: calc($set-gap * -1);
     @extend %list;
 }
 
 .clients-list__item{
-    margin-right: $set-gap;
-    margin-bottom: $set-gap;
+    margin: $set-gap;
 }
 
 .clients-list__link {
