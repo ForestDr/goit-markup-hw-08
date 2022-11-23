@@ -13,7 +13,7 @@
 
     background-color: $color-primary-bg;
 
-    transform: translateY(-100%);
+    transform: translateY(-101%);
     transition: transform $duration $timing-function;
 
     &.is-open {
