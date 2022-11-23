@@ -1,6 +1,7 @@
 .clients-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 //     justify-content: space-between;
     margin-right: calc($set-gap * -1);
     margin-bottom: calc($set-gap * -1);

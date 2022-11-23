@@ -597,6 +597,8 @@ body {
 
 .team-list__icon {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .team-list__box {
@@ -667,6 +669,7 @@ body {
 .clients-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-right: -30px;
   margin-bottom: -30px;
 }
