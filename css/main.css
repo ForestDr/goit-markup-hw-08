@@ -829,21 +829,16 @@ body {
   flex-wrap: wrap;
   margin: -15px;
 }
-@media screen and (max-width: 767px) {
-  .clients-list {
-    justify-content: center;
-  }
-}
 
 .clients-list__item {
   margin: 15px;
+  width: calc((100% - 60px) / 2);
 }
 
 .clients-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 210px;
   height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
@@ -869,11 +864,15 @@ body {
 }
 
 .page-footer__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .page-footer__address-container {
