@@ -13,7 +13,11 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 480px;
+    max-width: $mobile;
+
+    @media screen and (min-width: $tablet) {
+        max-width: $tablet;
+    }
 }
 
 .section {

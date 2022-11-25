@@ -9,6 +9,10 @@
 
 .page-header__logo {
     color: $color-icon;
+
+    @media screen and (min-width: $tablet) {
+        margin-right: auto;
+    }
 }
 
 .logo__text--highlight {

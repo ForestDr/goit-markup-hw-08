@@ -9,13 +9,20 @@
 
     background-color: $color-primary-bg;
     border-bottom: 1px solid #ececec;
+
+    @media screen and (min-width: $tablet) {
+        min-height: 80px;
+    }
 }
 
 .page-header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 9px;
+    
+    @media screen and (max-width: $max-mobile) {
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 9px;
+    }
 }
 
