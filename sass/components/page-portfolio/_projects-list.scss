@@ -1,14 +1,14 @@
 .projects-list {
-    // display: flex;
-    // flex-wrap: wrap;
-    margin-top: calc($set-gap * -1);
-    margin-bottom: calc($set-gap * -1);
     @extend %list;
+
+    @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+    }
 }
 
-.projects-list__item {
-    margin-top: $set-gap;
-    margin-bottom: $set-gap;
+.projects-list__item:not(:last-child) {
+    margin-bottom: 30px;
 }
 
 .projects-list__link {
