@@ -1,7 +1,8 @@
 .filter-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: calc($set-gap * -1 + 40px);
+    padding-right: 20px;
     @extend %list;
 }
 
@@ -10,6 +11,7 @@
 }
 
 .filter-list__btn {
+    margin-bottom: $set-gap;
     padding: 6px 22px;
 
     font-weight: 500;

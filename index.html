@@ -756,6 +756,13 @@
       </div>
     </div>
 
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.page-header')
+        .getBoundingClientRect();
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
@@ -766,12 +773,5 @@
     <script defer src="./js/menu.js"></script>
 
     <script src="./js/modal.js"></script>
-
-    <script>
-      const { height: pageHeaderHeight } = document
-        .querySelector('.page-header')
-        .getBoundingClientRect();
-      document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
   </body>
 </html>
