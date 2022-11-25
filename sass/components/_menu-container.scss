@@ -64,10 +64,12 @@
 // Навігація
 
 .site-nav {
-    margin-right: 96px;
-
-    @media screen and (max-width: $max-mobile) {
+   @media screen and (max-width: $max-mobile) {
         margin-bottom: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 96px;
     }
 }
 

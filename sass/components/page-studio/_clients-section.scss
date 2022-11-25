@@ -1,10 +1,13 @@
 .clients-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 //     justify-content: space-between;
     margin: calc($set-gap * -1);
     @extend %list;
+
+    @media screen and (max-width: $max-mobile) {
+        justify-content: center;
+    }
 }
 
 .clients-list__item{
@@ -31,6 +34,10 @@
         color: $color-accent;
         
         border-color: $color-accent;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 226px;
     }
 }
 
