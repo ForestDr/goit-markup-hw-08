@@ -1,14 +1,14 @@
 .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * $set-gap);
-    margin-left: calc(-1 * $set-gap);
+    // display: flex;
+    // flex-wrap: wrap;
+    margin-top: calc($set-gap * -1);
+    margin-bottom: calc($set-gap * -1);
     @extend %list;
 }
 
 .projects-list__item {
     margin-top: $set-gap;
-    margin-left: $set-gap;
+    margin-bottom: $set-gap;
 }
 
 .projects-list__link {
@@ -34,6 +34,8 @@
 
 .project-thumb__icon {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
 .project-overlay {
@@ -42,8 +44,9 @@
     left: 0;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
     height: 100%;
     width: 100%;
 
@@ -59,7 +62,7 @@
 }
 
 .project-overlay__descr {
-    width: 322px;
+    max-width: 402px;
 
     font-size: 18px;
     line-height: 1.56;
