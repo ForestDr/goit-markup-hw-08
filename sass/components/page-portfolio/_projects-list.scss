@@ -2,9 +2,9 @@
     @extend %list;
 
     @media screen and (min-width: $tablet) {
-            display: flex;
-            flex-wrap: wrap;
-            margin: calc($set-gap * -1);
+        display: flex;
+        flex-wrap: wrap;
+        margin: calc($set-gap * -1);
     }
 }
 
@@ -22,7 +22,9 @@
 }
 
 .projects-list__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     text-decoration: none;
 
@@ -92,6 +94,7 @@
 }
 
 .projects-list__box {
+    flex-grow: 1;
     padding: 20px 24px;
 
     border-right: 1px solid #eeeeee;

@@ -2,6 +2,7 @@
 
 .menu-container {
     display: flex;
+    flex-grow: 1;
 
     @media screen and (max-width: $max-mobile) {
         position: absolute;
@@ -66,7 +67,7 @@
     }
 
     @media screen and (min-width: $tablet) {
-        margin-right: 96px;
+        margin-right: auto;
     }
 }
 
