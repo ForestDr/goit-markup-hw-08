@@ -18,45 +18,34 @@
         opacity: 0;
         pointer-events: none;
     }
-
-    @media screen and (max-width: $max-mobile) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 // // Модальне вікно 
 
 .modal {
-    position: relative;
+    position: absolute;
+    // top: 50%;
+    top: 93px;
+    left: 50%;
 
     padding: 40px;
     max-width: 450px;
+    width: 100%;
 
     background-color: $color-primary-bg;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border-radius: 4px;   
 
-    transform: scale(1);
+    transform: translateX(-50%) scale(1);
     transition: transform $duration $timing-function;
 
-    @media screen and (min-width: $tablet) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        transform: translate(-50%, -50%) scale(1);
-        transition: transform $duration $timing-function;
-    }
-
     .backdrop--is-hidden & {
-        transform: scale(0.9);
-        
-        @media screen and (min-width: $tablet) {
-            transform: translate(-50%, -50%) scale(0.9);
-        }
+        transform: translateX(-50%) scale(0.9);
     }
+
+    // @media screen and (min-width: $tablet) {
+    //     top: ;
+    // }
 }
 
 .modal__close-btn {
@@ -73,15 +62,12 @@
 
     color: $color-icon;
 
+    cursor: pointer;
     background-color: $color-primary-bg;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
     transition: color $duration $timing-function;
-
-    &:hover {
-        cursor: pointer;
-    }
 
     &:hover,
     &:focus {

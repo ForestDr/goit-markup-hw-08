@@ -27,6 +27,7 @@
     letter-spacing: 0.03em;
     color: $color-primary;
 
+    cursor: pointer;
     background-color: $color-primary-btn;
     border: none;
     border-radius: 4px;
@@ -34,10 +35,6 @@
     transition: color $duration $timing-function,
     background-color $duration $timing-function,
     box-shadow $duration $timing-function;
-
-    &:hover {
-        cursor: pointer;
-    }
 
     &:hover,
     &:focus {
