@@ -41,11 +41,17 @@
 
     .backdrop--is-hidden & {
         transform: translateX(-50%) scale(0.9);
+
+        @media screen and (min-width: $tablet) and (min-height: $height-tablet) {
+            transform: translate(-50%, -50%) scale(0.9);
+        }
     }
 
-    // @media screen and (min-width: $tablet) {
-    //     top: ;
-    // }
+    @media screen and (min-width: $tablet) and (min-height: $height-tablet) {
+        top: 50%;
+
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
 
 .modal__close-btn {
@@ -215,6 +221,7 @@
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: $color-secondary;
+    user-select: none;
 }
 
 .modal-form__policy-link {
