@@ -1,8 +1,8 @@
 .clients-list {
     display: flex;
     flex-wrap: wrap;
-//     justify-content: space-between;
     margin: calc($set-gap * -1);
+    
     @extend %list;
 }
 
