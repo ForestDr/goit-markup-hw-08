@@ -1,4 +1,6 @@
 body {
+    padding-top: 60px;
+
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.71;
@@ -6,6 +8,10 @@ body {
     color: $color-primary;
 
     background-color: $color-primary-bg;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 80px;
+    }
 }
 
 .container {
