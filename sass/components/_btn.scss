@@ -23,20 +23,35 @@
     display: block;
     margin: 0 auto;
     padding: 10px 24px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 10px 32px;
+    }
 }
 
 .footer-form__btn {
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 28px;
     padding-left: 31px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+        margin-right: 0;
+        padding-left: 28px;
+    }
 }
 
 .btn__icon {
     margin-left: 12px;
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 10px;
+    }
 }
 
 .modal-form__btn {

@@ -1,5 +1,4 @@
 .feature-list {
-//     display: flex;
     @extend %list;
 
     @media screen and (min-width: $tablet) {
@@ -20,6 +19,10 @@
         margin: $set-gap;
 
         width: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 120px) / 4);
     }
 }
 

@@ -3,35 +3,52 @@
 }
 
 .page-footer__container {
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 60px;
     padding-bottom: 60px;
 
+    @media screen and (max-width: $max-mobile) {
+        flex-direction: column;
+    }
+
     @media screen and (min-width: $tablet) {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    @media screen and (min-width: $desktop){
+        justify-content: space-between;
+        align-items: baseline;
     }
 }
 
 // Адреса 
 
 .page-footer__address-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px;
-    // min-width: 231px;
+    @media screen and (max-width: $max-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
 }
 
 .address-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     @extend %list;
+
+    @media screen and (max-width: $max-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .address-list__item:not(:last-child) {
     margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 9px;
+    }
 }
 
 .address-list__link,
@@ -59,8 +76,9 @@
 // Контакти соц мереж в футері
 
 .page-footer__social-network-container {
-    // margin-left: 70px;
-    margin-bottom: 60px;
+    @media screen and (max-width: $max-tablet) {
+        margin-bottom: 60px;
+    }
 }
 
 .page-footer__text {
@@ -70,22 +88,22 @@
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    text-align: center;
     text-transform: uppercase;
     color: $color-secondary-accent;
+
+    @media screen and (max-width: $max-tablet) {
+        text-align: center;
+    }
 }
 
 // Форма в футері
 
-// .page-footer__form-container {
-//     margin-left: auto;
-// }
-
-// .footer-form {
-//     // display: flex;
-//     // flex-direction: column;
-//     // align-items: center;
-// }
+.footer-form {
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+    }
+}
 
 .footer-form__input {
     margin-bottom: 20px;
@@ -110,7 +128,12 @@
         color: $color-adress-contact;
     }
 
-    @media screen and (min-width: $tablet){
+    @media screen and (min-width: $tablet) {
         width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+        width: 358px;
     }
 }

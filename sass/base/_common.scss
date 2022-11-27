@@ -28,17 +28,24 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    &--hidden {
-        display: none;
-    }
-
     &--team-bg {
         background-color: $color-third-bg;
     }
 
-    // &--no-top-padding {
-    //     padding-top: 0;
-    // }   
+    @media screen and (max-width: $max-tablet) {
+        &--hidden {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+
+        &--no-top-padding {
+                padding-top: 0;
+            } 
+    }
 }
 
 .section__title {
@@ -49,4 +56,12 @@ body {
     line-height: 1.18;
     letter-spacing: 0.03em;
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        
+        font-size: 36px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+    }
 }
