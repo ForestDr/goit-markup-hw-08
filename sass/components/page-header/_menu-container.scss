@@ -16,6 +16,7 @@
 
         background-color: $color-primary-bg;
 
+        overflow-y: scroll;
         transform: translateY(-100%);
         transition: transform $duration $timing-function;
 
