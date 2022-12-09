@@ -1,264 +1,266 @@
 .backdrop {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 
-    opacity: 1;
-    transition: opacity $duration $timing-function;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity $duration $timing-function;
 
-    overflow-y: scroll;
+  overflow-y: scroll;
 
-    &--is-hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
-// // Модальне вікно 
+// // Модальне вікно
 
 .modal {
-    position: absolute;
-    // top: 50%;
-    top: 93px;
-    left: 50%;
+  position: absolute;
+  // top: 50%;
+  top: 93px;
+  left: 50%;
 
-    padding: 40px;
-    max-width: 450px;
-    width: 100%;
+  padding: 40px;
+  max-width: 450px;
+  width: 100%;
 
-    background-color: $color-primary-bg;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;   
+  background-color: $color-primary-bg;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
-    transform: translateX(-50%) scale(1);
-    transition: transform $duration $timing-function;
+  transform: translateX(-50%) scale(1);
+  transition: transform $duration $timing-function;
 
-    .backdrop--is-hidden & {
-        transform: translateX(-50%) scale(0.9);
-
-        @media screen and (min-width: $tablet) and (min-height: $height-tablet) {
-            transform: translate(-50%, -50%) scale(0.9);
-        }
-
-        @media screen and (min-width: $desktop) {
-            transform: translate(-50%, -50%) scale(0.9);
-        }
-    }
+  .backdrop--is-hidden & {
+    transform: translateX(-50%) scale(0.9);
 
     @media screen and (min-width: $tablet) and (min-height: $height-tablet) {
-        top: 50%;
-
-        transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(0.9);
     }
 
     @media screen and (min-width: $desktop) {
-        top: 50%;
-
-        max-width: 528px;
-        
-        transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(0.9);
     }
+  }
+
+  @media screen and (min-width: $tablet) and (min-height: $height-tablet) {
+    top: 50%;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @media screen and (min-width: $desktop) {
+    top: 50%;
+
+    max-width: 528px;
+
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .modal__close-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    width: 30px;
-    height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  width: 30px;
+  height: 30px;
 
-    color: $color-icon;
+  color: $color-icon;
 
-    cursor: pointer;
-    background-color: $color-primary-bg;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+  cursor: pointer;
+  background-color: $color-primary-bg;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 
-    transition: color $duration $timing-function;
+  transition: color $duration $timing-function;
 
-    &:hover,
-    &:focus {
-        color: $color-accent;
-    }
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
 }
 
 .close-btn__icon {
-    fill: currentColor;
+  fill: currentColor;
 }
 
 .modal-form {
-    @media screen and (min-width: $tablet) {
-        width: 370px;
-    }
+  @media screen and (min-width: $tablet) {
+    width: 370px;
+  }
 
-    @media screen and (min-width: $desktop){
-        width: 448px;
-    }
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
 }
 
 .modal-form__title {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 12px;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
 
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
     font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
+    line-height: 1.15;
     letter-spacing: 0.03em;
-
-    @media screen and (min-width: $desktop) {
-        font-size: 20px;
-        line-height: 1.15;
-        letter-spacing: 0.03em;
-    }
+  }
 }
 
 // // Ім'я, телефон, пошта, коментар
 
 .modal-form__field {
-    position: relative;
+  position: relative;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .modal-form__label {
-    display: block;
-    margin-bottom: 4px;
+  display: block;
+  margin-bottom: 4px;
 
-    color: $color-secondary;
+  color: $color-secondary;
 }
 
 .modal-form__label {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
 .modal-form__input {
-    padding: 11px 12px 11px 42px;
-    height: 40px;
+  padding: 11px 12px 11px 42px;
+  height: 40px;
 }
 
 .modal-form__input,
 .modal-form__comment,
 .modal-form__comment::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
 
-    @media screen and (min-width: $desktop) {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
 }
 
 .modal-form__input,
 .modal-form__comment {
-    width: 100%;
-    color: $color-text-form; 
+  width: 100%;
+  color: $color-text-form;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    transition: border-color $duration $timing-function;
-    outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color $duration $timing-function;
+  outline: none;
 
-    &:focus{
-        border-color: $color-accent;
-    }
+  &:focus {
+    border-color: $color-accent;
+  }
 }
 
 .modal-form__icon {
-    position: absolute;
-    bottom: 11px;
-    left: 12px;
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
 
-    fill: $color-icon;
+  fill: $color-icon;
 
-    pointer-events: none;
+  pointer-events: none;
 
-    transition: fill $duration $timing-function;
+  transition: fill $duration $timing-function;
 
-    .modal-form__input:focus + & {
-        fill: $color-accent;
-    }
+  .modal-form__input:focus + & {
+    fill: $color-accent;
+  }
 }
 
 .modal-form__comment {
-    padding: 12px 16px;
-    height: 120px;
-    margin-bottom: 20px;
+  padding: 12px 16px;
+  height: 120px;
+  margin-bottom: 20px;
 
-    resize: none;
+  resize: none;
 
-    &::placeholder {
-        color: $color-text-form;
-    }
+  &::placeholder {
+    color: $color-text-form;
+  }
 }
 
-// Чекбокс 
+// Чекбокс
 
 .modal-form__label-policy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .modal-form__checkbox {
-    appearance: none;
-    position: absolute;
+  appearance: none;
+  position: absolute;
 }
 
 .modal-form__icon-check {
-    margin-right: 8px;
+  margin-right: 8px;
 
-    border: 2px solid $color-primary;
-    border-radius: 3px;
+  border: 2px solid $color-primary;
+  border-radius: 3px;
 
-    transition: background-color $duration $timing-function,
-    border-color $duration $timing-function;
+  transition: background-color $duration $timing-function, border-color $duration $timing-function;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    .modal-form__checkbox:checked + &,
-    .modal-form__checkbox:checked:focus + & {
+  .modal-form__checkbox:checked + &,
+  .modal-form__checkbox:checked:focus + & {
     background-color: $color-accent;
     border: none;
-    }
+  }
 
-    .modal-form__checkbox:focus + & {
-        border-color: $color-accent;
-    }
+  .modal-form__checkbox:focus + & {
+    border-color: $color-accent;
+  }
 }
 
 .modal-form__policy {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: $color-secondary;
-    user-select: none;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $color-secondary;
+  user-select: none;
 
-    @media screen and (min-width: $desktop) {
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-    }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__policy-link {
-    color: $color-accent;
+  color: $color-accent;
 }
