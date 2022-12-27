@@ -139,13 +139,10 @@
   display: block;
   margin-bottom: 4px;
 
-  color: $color-secondary;
-}
-
-.modal-form__label {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  color: $color-secondary;
 }
 
 .modal-form__input {
